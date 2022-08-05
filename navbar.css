@@ -2,8 +2,12 @@
            box-sizing: border-box;
            margin: 0;
            padding: 0;
-           font-family: 'Lobster Two', cursive;
-     }
+           font-family: 'Dancing Script', cursive;
+           }
+           body {
+               margin: 2%;
+               border: 3px solid rgb(210, 230, 230);
+           }
      #nav {
          
           width: 100%;
@@ -15,9 +19,13 @@
            flex-direction: row;
            justify-content: flex-end;
            background-color: rgb(210, 230, 230);
-          
-     
-     }
+      
+    }
+    @media (max-width: 612px) {
+              #nav-bar {
+                  flex-direction: column;
+              }    
+        }
      img {
            width: 120px; height: 120px;
            position: relative;
@@ -60,19 +68,53 @@
                   background-position: center;
                   background-size: cover;
                   border: none;       
-                  position: sticky;
+                  position: relative;
                   float: right;
                   margin-top: 5.1em;  
                }
           #What-we-do {
-                 
+                width:100%; height:100vh;
+                background-color: rgb(235, 178, 222);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
           }
+          h2 {
+               font-size: 2em;
+               padding: 1em;
+               position: relative;
+               right: 15px;;
+          }
+          #foto {
+                 min-width: 30%; min-height: 30%;
+                 background-image: url(https://i.pinimg.com/originals/bb/3d/20/bb3d202c7a44e374f629292984c518da.jpg);
+               background-repeat: no-repeat;
+               background-size: contain;
+               
+               }
+               #descripcion {
+                   
+                   padding-top: 5%; 
+               }
+               @media (max-width: 380px) {
+                     #descripcion {
+                            font-size: 1.5em;  
+                            padding-top: 5%;  
+                            text-align: unset;     
+                        }
+                      #foto {
+                         min-width: 80%; 
+                      }
+               }
+            
+               
           #footer {
                  width: 100%; max-height: 12vh;
-                 background-color: black;
+                 background-color: rgb(210, 230, 230);
                  color:aliceblue;
                  display: flex;
                  justify-content: center;
+                 margin-bottom: none;
           }
           #p-footer {
                  padding-top: none;
@@ -89,6 +131,8 @@
                background-position: center;
                background-size: cover;
                border: none;       
-               
-               
+                        
+          }
+          #contacto-id:hover, #contacto-fb:hover {
+                   cursor: pointer;
           }
